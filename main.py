@@ -83,7 +83,67 @@ st.markdown(
       .small-muted { color: #68756b; font-size: .82rem; }
       .section-heading { color: #183f32; font-weight: 750; letter-spacing: -.015em; }
       div[data-testid="stAlert"] { border-radius: 12px; }
-      .stButton button { border-radius: 10px; }
+      
+/* Buttons: readable text and strong contrast */
+.stButton button {
+    border-radius: 10px;
+    color: #ffffff !important;
+    background-color: #285b43 !important;
+    border: 1px solid #285b43 !important;
+}
+
+.stButton button:hover {
+    color: #ffffff !important;
+    background-color: #183f32 !important;
+    border-color: #183f32 !important;
+}
+
+/* Sidebar labels and form labels */
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {
+    color: #183f32 !important;
+}
+
+/* General text on the light page background */
+.stApp,
+.stApp p,
+.stApp label,
+.stApp [data-testid="stCaptionContainer"] {
+    color: #243b30;
+}
+
+/* Chart axis labels and tick labels */
+.stApp svg text {
+    fill: #435449 !important;
+}
+
+/* Keep the hero banner text white */
+.hero,
+.hero h1,
+.hero p {
+    color: #ffffff !important;
+}
+
+/* Keep metric and recommendation text dark */
+.metric-label,
+.metric-foot,
+.small-muted,
+.metric-value,
+.risk-title,
+.section-heading {
+    color: #183f32 !important;
+}
+
+/* Ensure alert text remains readable */
+div[data-testid="stAlert"] {
+    color: #243b30 !important;
+    border-radius: 12px;
+}
+
+footer {
+    visibility: hidden;
+}
+
       footer { visibility: hidden; }
     </style>
     """,
